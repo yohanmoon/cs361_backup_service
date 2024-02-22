@@ -112,7 +112,7 @@ def main():
         client, addr = server.accept()
         print(f'Got connection from {addr} \n')
         print("Starting automatic back-up ...")
-        time.sleep(1)
+        time.sleep(3)
 
         while True:
             #start backup automation
@@ -131,6 +131,9 @@ def main():
                     abs_path = os.path.abspath(last_backup)                 # Convert last backup file to absolute path
                     client.send(abs_path.encode())                          # send client the requested data
                     print("         Latest back up sent to the client.")
+                if req == "Exit" or req=="exit":
+                    print("         ** ALERT **: Client requested to end connection")
+                    break
                 else:
                     client.send(f"Invalid request command '{req}' sent.".encode())
                     print("         ** ALERT **: Invalid request received")
@@ -142,10 +145,8 @@ def main():
             
     except ConnectionResetError:
         print("\n       ** ALERT **: Connection ended by the client, ending the program.\n")
-        server.close()
     except ConnectionAbortedError:
         print("\n       ** ALERT **: Connection aborted by the client, ending the program.\n")
-        server.close()
     except Exception as e:
         print("\n       ** ALERT **: Something went wrong",e)
     finally:
