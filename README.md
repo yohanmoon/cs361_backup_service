@@ -1,9 +1,7 @@
 <div align="center">
-<h3 align="center">Automatic Back Up Microservice</h3>
+<h2 align="center">Automated Back Up Microservice</h3>
 
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -11,9 +9,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#instruction">Instruction</a>
@@ -33,16 +28,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+This is a microservice where the program starts automated backup of the file specified by the user at every interval specified by the user. The automated back-up will begin once the client program is connected to the server by `Socket`.
+The microservice sends back the file path of the latest back-up if a request is made from the client program.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [![Python][Python.org]][Python-url]
-
+### Uses
+  * `Python`
+  * `Socket`
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -50,8 +41,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- Instruction -->
 ## Instruction
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Communication between the server(microservice) and the client program is made via `Socket`
 
 ### Request Data
 
