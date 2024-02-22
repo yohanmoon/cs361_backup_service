@@ -29,9 +29,9 @@
 ## About The Project
 
 This is a microservice where the program starts automated backup of the file specified by the user at every interval specified by the user. 
-The automated back-up will begin once the client program is connected to the server by `Socket`, this will continue without any data requested by the client program.
+The automated back-up will begin once the client program is connected to the server by `Socket`. Backup process will continue without any data requested by the client program.
 
-The microservice sends back the file path of the latest back-up when a request is made from the client program.
+The microservice sends back the path of the latest backup file when a request is made from the client program.
 
 ### Uses
   * `Python`
