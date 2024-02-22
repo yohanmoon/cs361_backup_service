@@ -86,7 +86,7 @@ Start the client program after above user inputs are made.
 
 ## UML
 
-example sentence
+![Assignment 9 UML](https://github.com/yohanmoon/cs361_backup_service/assets/90400063/ef87a658-59a3-49cd-8a91-b8452b4d3d33)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
