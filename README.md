@@ -38,7 +38,6 @@ The microservice sends back the file path of the latest back-up when a request i
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- Instruction -->
 ## Instruction
 
@@ -47,6 +46,7 @@ Currently, the source file path and the backup interval are entered at the beggi
 the microservice does not know where the client plans to hold the source file.
 
 Start the client program after above user inputs are made.
+
 
 ### Request Data
 
@@ -71,16 +71,16 @@ Start the client program after above user inputs are made.
    request = "revert"
    s.send(request.encode())
    ```
-   * The microservice will respond to "Revert" and "revert" for retrieval of lastest backup file. 
+   * The microservice will respond to `"Revert"` and `"revert"` for retrieval of lastest backup file. 
+
 
 ### Receive Data
-
 
 * Receive the data by decoing to get the string
    ```sh
    s.recv(1024).decode()
    ```
-   * The data receive will the absolute path of the backup file.
+   * The data received from the server will the absolute path of the backup file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
