@@ -49,7 +49,7 @@ Start the client program after above user inputs are made.
 
 
 ### Request Data
-
+How to request data from the microservice:
 1. Import socket module
    ```sh
    import socket
@@ -62,11 +62,11 @@ Start the client program after above user inputs are made.
    ```sh
    port = 12345
    ```
-4. connect to the server on local computer
+4. Connect to the server on local computer
    ```sh
    s.connect(('127.0.0.1', port))
    ```
-5. send request data by encoding the string
+5. Send request data by encoding the string
    ```sh
    request = "revert"
    s.send(request.encode())
@@ -75,12 +75,12 @@ Start the client program after above user inputs are made.
 
 
 ### Receive Data
-
-* Receive the data by decoing to get the string
+How to receive data from the microservice:
+* Receive the data by decoding to get the string
    ```sh
    s.recv(1024).decode()
    ```
-   * The data received from the server will the absolute path of the backup file.
+   * The decoded string will the absolute path of the backup file.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
