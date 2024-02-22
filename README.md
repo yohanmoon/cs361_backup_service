@@ -15,7 +15,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-
     <li>
       <a href="#instruction">Instruction</a>
       <ul>
@@ -58,9 +57,9 @@ To get a local copy up and running follow these simple example steps.
 
 This is an example of how to list things you need to use the software and how to install them.
 1. Import socket module
-  ```sh
-  import socket
-  ```
+   ```sh
+   import socket
+   ```
 2. Create a socket object
    ```sh
    s = socket.socket()
@@ -74,10 +73,10 @@ This is an example of how to list things you need to use the software and how to
    s.connect(('127.0.0.1', port))
    ```
 5. send request data by encoding the string
-  ```sh
-  request = "abc"
-  s.send(request.encode())
-  ```
+   ```sh
+   request = "abc"
+   s.send(request.encode())
+   ```
 
 ### Receive Data
 
