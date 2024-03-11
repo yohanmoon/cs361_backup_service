@@ -1,5 +1,5 @@
 <div align="center">
-<h2 align="center">Automated Back Up Microservice</h3>
+<h2 align="center">Back Up Microservice</h3>
 
 </div>
 
@@ -28,9 +28,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a microservice where the program starts automated backup of the file specified by the user at every interval specified by the user. 
+This is a microservice where the program creates backup file of path specified by the user.
 
-The backup automation will begin once the client program is connected to the server by `Socket`. Backup process will continue without any data requested by the client program.
+The backup automation will begin once the client program is connected to the server by `Socket`.
 The backup files will be saved in `./backup_file` directory.
 
 The microservice sends back the path of the latest backup file when a request is made from the client program.
@@ -44,10 +44,7 @@ The microservice sends back the path of the latest backup file when a request is
 ## Instruction
 
 Communication between the server(microservice) and the client program is made via `Socket`.
-Currently, the source file path and the backup interval are entered at the beginning of the program as
-the microservice does not know where the client plans to hold the source file.
 
-Start the client program after above user inputs are made.
 
 
 ### Request Data
@@ -73,6 +70,7 @@ How to request data from the microservice:
    request = "revert"
    s.send(request.encode())
    ```
+   * The microservice will respond to `"Backup"` and `"backup"` for creating a backup file.
    * The microservice will respond to `"Revert"` and `"revert"` for retrieval of lastest backup file. 
 
 
